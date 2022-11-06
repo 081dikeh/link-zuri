@@ -1,4 +1,4 @@
-import './home.css'
+import './css/home.css'
 import React from 'react'
 import ProfileImage from './profile-image.jpg'
 import Slack from './slack.png'
@@ -7,17 +7,19 @@ import Phoneshare from './phone1.png'
 import Pcshare from './pc1.png'
 import IG from './I4G.png'
 import Vector from './Vector.png'
+import Contact from './Contact'
 import Camera from './camera-01.png'
+import { Link } from 'react-router-dom'
 
 
 export default function Home() {
     return (
-        <div className='main'>
+        <div id='main'>
             <section id="profile">
                 <div className="profile-pic">
-                <img src={ProfileImage} alt="" id="profile_img" />
-                <span id='profile-hover'></span>
-                <img src={Camera} id='camera' />
+                    <img src={ProfileImage} alt="" id="profile_img" />
+                    <span id='profile-hover'></span>
+                    <img src={Camera} id='camera' />
                 </div>
                 <h2 id="twitter"><a href="https://twitter.com/Danishadow081" target='_blank'>Danishadow081</a></h2>
                 <h2 id="slack"><a href="">DaniD</a></h2>
@@ -32,11 +34,13 @@ export default function Home() {
 
 
             <section id="links">
+                <a href="https://twitter.com/Danishadow081" target='_blank' className='btn-links'>Twitter Link</a>
                 <a href="https://training.zuri.team/" className='btn-links' id="btn__zuri" target='_blank'>Zuri Team</a>
                 <a href="http://books.zuri.team/" className='btn-links' id="books" target='_blank'>Zuri Books</a>
                 <a href="https://books.zuri.team/" className='btn-links' id="book__python" target='_blank'>Python Books</a>
                 <a href="https://background.zuri.team/" className='btn-links' id="pitch" target='_blank'>Background Check for Coders</a>
                 <a href="https://books.zuri.team/design-rules" className='btn-links' id="book__design" target='_blank'>Design Books</a>
+                <Link to='/contact' className='btn-links' id='contact'>Contact Me</Link>
             </section>
 
             <section className="social-section">
